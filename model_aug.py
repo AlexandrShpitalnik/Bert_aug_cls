@@ -16,13 +16,19 @@ from pytorch_pretrained_bert.optimization import BertAdam
 from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 
 class BertAug:
-    def __init__(self, model_name, do_lower_case=True, base_model="bert-base-uncased"):
+    def __init__(self, model_name, do_lower_case=True, base_model="bert-base-uncased", use_untuned=False):
         self.model_name = model_name
         bert_model = base_model
         self.tokenizer = BertTokenizer.from_pretrained(bert_model, do_lower_case=do_lower_case)
 
-        weights_path = os.path.join(str(PYTORCH_PRETRAINED_BERT_CACHE), model_name)
-        self.model = torch.load(weights_path)
+        if use_untuned:
+            cache_dir = PYTORCH_PRETRAINED_BERT_CACHE
+            self.model = BertForMaskedLM.from_pretrained(bert_model, cache_dir=cache_dir)
+            self.model.bert.embeddings.token_type_embeddings = torch.nn.Embedding(5, 768)
+            self.model.bert.embeddings.token_type_embeddings.weight.data.normal_(mean=0.0, std=0.02)
+        else:
+            weights_path = os.path.join(str(PYTORCH_PRETRAINED_BERT_CACHE), model_name)
+            self.model = torch.load(weights_path)
         self.model.cuda()
 
         self.MAX_LEN = 10
