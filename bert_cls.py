@@ -11,13 +11,14 @@ import io
 
 
 class BertClassificationModel:
-    def __init__(self, n_epochs=4, batch_size=10):
+    def __init__(self, n_epochs=4, batch_size=10, lr=2e-5):
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
         self.MAX_LEN = 128
         self.batch_size = batch_size
         self.n_epochs = n_epochs
         self.device = torch.device('cuda:0')
         self.model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
+        self.lr = lr
 
     def _preprocess_batch(self, x):
         return [self.__preprocess_sent(sent) for sent in x]
@@ -51,7 +52,7 @@ class BertClassificationModel:
              'weight_decay_rate': 0.0}
         ]
 
-        optimizer = BertAdam(optimizer_grouped_parameters, lr=2e-5, warmup=.1)
+        optimizer = BertAdam(optimizer_grouped_parameters, lr=self.lr, warmup=.1)
 
         train_loss_set = []
 

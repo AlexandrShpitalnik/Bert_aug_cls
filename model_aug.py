@@ -16,7 +16,7 @@ from pytorch_pretrained_bert.optimization import BertAdam
 from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 
 class BertAug:
-    def __init__(self, model_name, do_lower_case=True, base_model="bert-base-uncased", use_untuned=False):
+    def __init__(self, model_name, do_lower_case=True, base_model="bert-base-uncased", use_untuned=False, use_stop=False):
         self.model_name = model_name
         bert_model = base_model
         self.tokenizer = BertTokenizer.from_pretrained(bert_model, do_lower_case=do_lower_case)
@@ -33,7 +33,10 @@ class BertAug:
 
         self.MAX_LEN = 10
         self.__segment_proc_flag = True
-        self.__stop_words = [] #set(stopwords.words('english'))
+        if use_stop:
+            self.__stop_words = set(stopwords.words('english'))
+        else:
+            self.__stop_words = []
 
 
     def aug_batch(self, sents):
@@ -144,23 +147,26 @@ class BertAug:
         arg = np.log(p)/temp
         return BertAug.__softmax(arg)
 
-    def aug_sent(self, sent, label, mask=None, n_random=2, n_samples=4, temp=0.5):
-        true_tokens_ids, input_tokens_ids, attention_seq, label_seq, masked_ids = self.__proc_sent(sent, mask, label, n_random)
-        res_tensor = self.__bert_eval(input_tokens_ids, attention_seq, label_seq)
-        gen_sent = [sent]
-        iter = 0
-        max_iter = n_samples * 3
-        while len(gen_sent) < n_samples and iter < max_iter:
-            new_sent_tokens_ids = true_tokens_ids[:]
-            for idx in masked_ids:
-                cnd_val = res_tensor[0][idx+1]
-                cnd_val = cnd_val.cpu().numpy()
-                cnd_val_softed = BertAug.__temp_softmax(cnd_val, temp)
-                cnd = np.random.choice(len(cnd_val_softed), 1, p=cnd_val_softed)
-                new_sent_tokens_ids[idx+1] = int(cnd)
-            new_sent_tokens = self.tokenizer.convert_ids_to_tokens(new_sent_tokens_ids)
-            new_sent = self.__rev_wordpiece(new_sent_tokens)
-            if new_sent not in gen_sent:
-                gen_sent.append(new_sent)
-            iter += 1
-        return gen_sent
+    def aug_sent(self, sent, label, mask=None, n_random=2, n_samples=4, temp=0.5, n_rounds=4):
+        res_sent = {sent}
+        max_round_iter = n_samples * 2
+        for r in range(n_rounds):
+            iter = 0
+            gen_sent = set()
+            true_tokens_ids, input_tokens_ids, attention_seq, label_seq, masked_ids = self.__proc_sent(sent, mask, label, n_random)
+            res_tensor = self.__bert_eval(input_tokens_ids, attention_seq, label_seq)
+            while len(gen_sent) < n_samples and iter < max_round_iter:
+                new_sent_tokens_ids = true_tokens_ids[:]
+                for idx in masked_ids:
+                    cnd_val = res_tensor[0][idx+1]
+                    cnd_val = cnd_val.cpu().numpy()
+                    cnd_val_softed = BertAug.__temp_softmax(cnd_val, temp)
+                    cnd = np.random.choice(len(cnd_val_softed), 1, p=cnd_val_softed)
+                    new_sent_tokens_ids[idx+1] = int(cnd)
+                new_sent_tokens = self.tokenizer.convert_ids_to_tokens(new_sent_tokens_ids)
+                new_sent = self.__rev_wordpiece(new_sent_tokens)
+                if new_sent not in res_sent:
+                    gen_sent.add(new_sent)
+                iter += 1
+            res_sent += gen_sent
+        return list(res_sent)
