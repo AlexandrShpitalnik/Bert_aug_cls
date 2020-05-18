@@ -1,0 +1,155 @@
+label;sent;question
+1;2;There won’t be a woman President of the United States for a long time and that’s probably just as well
+1;1;Do you love our amazing support team?
+1;1;How likely is it that you will attend the 2014 conference at our new, low entry prices?
+1;0;Should people be allowed to protect themselves from harm by using Mace as self-defense?
+1;1;Would you vote for a woman for President if she were qualified in every other aspect?
+1;1;I am glad to see a woman as a serious contender for president.
+1;1;What do you like about our city?
+1;1;If your party nominated a generally well-qualified person who happened to be woman, would you vote for that person?
+1;2;Are you aware that a homeowner’s policy does not cover flooding and that you must contact an agent to buy a separate flood insurance policy to protect against flood damage?
+1;1;Are you more inclined to invest in the stock market now that interest rates on savings accounts and CDs are so low?
+1;2;How much do you think you can save by buying online?
+1;2;How much more would you pay for the convenience of shopping online?
+1;2;How short was Napoleon?
+1;1;Should concerned parents use infant car seats?
+1;2;Did you see the man in the black-and-white overalls?
+1;2;Do you agree that Scotland should be an independent country?
+1;0;About how fast were the cars going when they smashed? 
+1;2;Should the United Kingdom remain a member of the European Union?
+1;0;How late do you think that the project will deliver?
+1;1;Lori's very efficient, don't you think?
+1;1;Option Two is better, isn't it?
+1;2;Shall we all approve Option Two?
+1;2;Shall I choose Option Two?
+1;0;Do you believe infant car seats can protect riders from being maimed?
+1;2;What year in the 15th century did Columbus arrive in the Americas?
+1;0;What do you think about John Richards? Many people are opposed to him, by the way.
+1;1;Would you prefer to live in Alba or in Barta, where the crime rate is very low?
+1;2;Do you agree that we need to save the whales?
+1;2;Is it true that you are happier now?
+1;0;That's a good thing to do, isn't it?
+1;2;You'll come to dinner tonight, won't you?
+1;2;I wonder if you're feeling better now, aren't you?
+1;2;And you’ve never experienced anything like this before? 
+1;2;There’s no history of cancer in your family, is there?
+1;2;You don’t really think this is related to your back pain, do you?
+1;2;How often have you taken recreational drugs?
+1;2;When are you planning to have children?
+1;2;How often do you drink alcohol?
+1;2;And you don’t have asthma or anything?
+1;2;What else are you worried about?
+1;2;What other health problems do you have?
+1;2;You aren’t allergic to anything, are you?
+1;0;What do you think of the horrible effects of pollution?
+1;2;Did you see Michael at 3 p.m.?
+1;2;Did Janice strike you in the face, with her fist?
+1;2;You were in Los Angeles last week, weren’t you?
+1;2;Should I sign you up for 3-year warranty, or the 6-year warranty?
+1;1;Would you say you are extremely satisfied with the president?
+1;2;How much did you enjoy with your teachers during the sports day at school?
+1;2;If you enjoyed this conference, shall we conduct another conference in a similar manner?
+1;2;Do you think it is the responsibility of the federal government to make sure all Americans have health care coverage?
+1;2;Should the Government spend less on military and more on healthcare?
+1;0;Would you be more likely or less likely to vote for John McCain for president if you knew he had fathered an illegitimate black child?
+1;0;Do you believe that the media unfairly reported on President Trump’s executive order temporarily restricting people entering our country from nations compromised by radical Islamic terrorism?
+1;0;would you be more or less likely to vote for Governor Richards if you knew that lesbians dominated on her staff
+1;1;How much did you enjoy this YouTube video?
+1;2;Should responsible parents vaccinate their children?
+1;0;A recent poll found 80% of Americans disagreed with this government policy. How unhappy are you about this policy?
+1;2;How do you feel about our two new flavors, French Vanilla and Hazelnut Cream?
+1;2;How have teachers and students responded to the new dress code?
+1;2;Which title and subtitle do you prefer?
+1;2;Have you stopped beating your wife?
+1;2;should president start helping to improve the country and stop too much politics
+1;4;What contemptible scoundrel stole the cork from my lunch?
+1;2;How many inches over six feet is the Venus de Milo ?
+1;2;Why do horseshoes bring luck ?
+1;2;How many years ago did the ship Titanic sink ?
+1;2;How successful is arometherapy ?
+1;2;Give a reason for American Indians oftentimes dropping out of school .
+1;2;How many miles is it to Ohio from North Carolina ?
+1;2;How many degrees cooler is the inside of a cucumber than the air outside ?
+1;2;How many people died on D-Day ?
+1;0;What excuse did the NATO people give for hitting the Chinese embassy ?
+1;0;What would you think of Elizabeth Colbert Busch if I told you she had had an abortion?
+1;2;As long as nobody minds, is it okay to smoke indoors?
+1;0;Why do horseshoes bring luck?
+0;2;How would you rate the performance of our support team on a scale of 1 to 10?
+0;2;How likely is it that you will attend the 2014 conference?
+0;2;What should people be allowed to use for self defense?
+0;2;What, if anything, do you like about our city?
+0;2;How has your inclination to invest in the stock market changed compared to 12 months ago?
+0;2;How would you describe Napoleon’s height?
+0;2;Do you think special car seats should be required for infant passengers?
+0;2;Did you see a man in the black-and-white overalls?
+0;2;Should Scotland be an independent country?
+0;2;Should the United Kingdom remain a member of the European Union or leave the European Union?
+0;2;Do you want to approve Option Two or not?
+0;2;Would you like me to go ahead with Option Two?
+0;2;Do you think child car seats are useful?
+0;2;Have you ever experienced anything like this before?
+0;2;Is there any history of cancer in your family?
+0;2;Why do you think this is related to your back pain?
+0;2;Have you ever taken recreational drugs?
+0;2;Are you planning to try for a baby?
+0;2;Do you drink alcohol? 
+0;2;Do you have asthma, or any other conditions?
+0;2;Are you worried about anything else?
+0;2;Do you have any other health problems?
+0;2;Are you allergic to anything that you know of?
+0;2;Do they like to study?
+0;2;Will you go to the cinema?
+0;2;Do you have breakfast every morning?
+0;2;Who wants to meet with them?
+0;2;Have you tried this new dish?
+0;2;Did you get a good mark?
+0;2;Are you serious?
+0;2;Do you like cherry ice-cream?
+0;2;Who invites candidates to the interview?
+0;2;Have you bought anything on this website?
+0;2;Do you like this country?
+0;2;Does Jane know about your new job?
+0;2;Can I call my sister? 
+0;2;Is it cold outside?
+0;2;Are they ready for the trip?
+0;2;Are you hungry?
+0;2;Have you done your homework?
+0;2;Will you buy that dress?
+0;2;Did she clean the room?
+0;2;At what time did you see Michael on the day in question?
+0;2;Where did Janice strike you?
+0;2;With what did Bob strike you?
+0;2;Were you in Los Angeles last week?
+0;2;Did you want us to add a warranty to your car?
+0;2;How would you rate the president: low, medium, or high?
+0;2;Whose children are playing in the yard?
+0;2;Should the Government spend less on Military?
+0;2;On a scale of 1-5, with 1 being the worst and 5 being the best, please rate this YouTube video.
+0;2;Do you think children’s vaccinations should be required?
+0;2;Please rate your level of agreement with this government policy.
+0;2;How do you feel about our new flavor French Vanilla?
+0;2;How have teachers responded to the new dress code?
+0;2;Which title do you prefer?
+0;2;How did serfdom develop in and then leave Russia ?
+0;2;What films featured the character Popeye Doyle ?
+0;2;How can I find a list of celebrities ' real names ?
+0;2;What fowl grabs the spotlight after the Chinese Year of the Monkey ?
+0;2;What is the full form of .com ?
+0;2;Which subtitle do you prefer?
+0;2;How do you feel about smoking indoors?
+0;2;What team did baseball 's St. Louis Browns become ?
+0;2;What is the oldest profession ?
+0;2;What are liver enzymes ?
+0;2;Name the scar-faced bounty hunter of The Old West .
+0;2;When was Ozzy Osbourne born ?
+0;2;What 's the first day of the week ?
+0;2;What were popular songs and types of songs in the 1920s ?
+0;2;Who was the Democratic nominee in the American presidential election ?
+0;2;What percentage of the body is muscle ?
+0;2;When is Bastille Day ?
+0;2;Who was the first person inducted into the U.S. Swimming Hall of Fame ?
+0;2;When did CNN begin broadcasting ?
+0;2;Who is the monarch of the United Kingdom ?
+0;2;What is the most common kind of skin cancer in the U.S. ?
+0;2;Where was Lincoln assassinated ?
