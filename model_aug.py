@@ -168,5 +168,5 @@ class BertAug:
                 if new_sent not in res_sent:
                     gen_sent.add(new_sent)
                 iter += 1
-            res_sent += gen_sent
+            res_sent.update(gen_sent)
         return list(res_sent)
